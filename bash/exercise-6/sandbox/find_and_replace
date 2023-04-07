@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+findd=$1
+replac=$2
+routes=$(find ./ -type f -exec grep -wo ''$findd'' {} \; -print | grep -v ''$findd'')
+
+for route in $routes
+do
+	sed -i 's/\b'$findd'\b/'$replac'/g' $route
+done
