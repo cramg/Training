@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+string=$1
+
+zgrep "$string" ~/.milocate.gz

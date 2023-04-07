@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+echo "Updating database..."
+find ~+ /home/charro -type f | gzip -c > $HOME/.milocate.gz
+echo "Done"
